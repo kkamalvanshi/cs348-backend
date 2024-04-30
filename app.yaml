@@ -1,0 +1,10 @@
+#app.yaml
+runtime: python311
+
+entrypoint: gunicorn -b :$PORT flask_app:app
+
+env_variables:
+  CLOUD_SQL_USERNAME: kkamalva
+  CLOUD_SQL_PASSWORD: Superrobin3$
+  CLOUD_SQL_DATABASE_NAME: mlregistry
+  CLOUD_SQL_CONNECTION_NAME: cs348-421716:us-central1:kkamalva
